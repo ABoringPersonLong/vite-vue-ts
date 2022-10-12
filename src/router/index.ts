@@ -7,11 +7,18 @@ NProgress.configure({ showSpinner: false }) // 显示右上角螺旋加载提示
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
-    component: () => import('@/layout/Home.vue')
+    component: () => import('@/layout/Layout.vue'),
+    redirect: '/home',
+    children: [
+      {
+        path: 'home',
+        component: () => import('@/views/Home.vue')
+      },
+      {
+        path: 'user',
+        component: () => import('@/views/User.vue')
+      }
+    ]
   }
 ]
 

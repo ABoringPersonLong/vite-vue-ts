@@ -13,7 +13,7 @@ let loadingInstance: any = null // 存放加载组件的实例
 service.interceptors.request.use((config: AxiosRequestConfig) => {
   loadingInstance = ElLoading.service({
     lock: true,
-    background: 'rgba(0, 0, 0, 0.6)'
+    background: 'rgba(0, 0, 0, 0.3)'
   })
   return config
 }, (error: AxiosError) => {
