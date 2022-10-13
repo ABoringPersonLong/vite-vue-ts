@@ -1,5 +1,5 @@
 <template>
-  <div class="app-main-container">
+  <div class="app-main-container relative mt-[-50px] p-[10px] pt-[60px] h-full">
     <router-view v-slot="{ Component }">
       <transition>
         <keep-alive>
@@ -12,11 +12,6 @@
 
 <style lang="scss" scoped>
 .app-main-container {
-  position: relative;
-  margin-top: -50px;
-  padding-top: 50px;
-  height: 100%;
-
   // Transition 组件的过渡样式
   .v-enter-active,
   .v-leave-active {

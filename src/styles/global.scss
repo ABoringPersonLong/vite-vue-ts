@@ -1,8 +1,10 @@
 html,
 body,
-#app,
-.app-container,
-.layout-container,
-.home-container {
+#app {
   height: 100%;
+}
+
+.el-card {
+  border: none;
+  background-color: #141414;
 }

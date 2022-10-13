@@ -5,9 +5,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-  background-color: #fff;
-  color: #555;
+  background-color: #0d1117;
+  color: #fff;
   font: 14px/1.5 Consolas, SimHei, sans-serif; // 字体大小 16px 行高 1.5 倍
   -webkit-font-smoothing: antialiased; // CSS3 抗锯齿形，让文字显示的更加清晰
 }
@@ -28,19 +32,6 @@ img {
   vertical-align: middle; // 取消图片底侧有空白缝隙的问题
 }
 
-// a 标签的样式
-a {
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all .3s;
-
-  &:hover,
-  &:focus {
-    color: #409eff;
-  }
-}
-
 // 控制元素隐藏的类名
 .hide {
   display: none;
@@ -48,8 +39,6 @@ a {
 
 // 清除浮动的类名
 .clearfix {
-  *zoom: 1; // 兼容 IE6
-
   &:before,
   &:after {
     content: '';
@@ -76,12 +65,13 @@ a {
 
   // 滚动条整体样式
   &::-webkit-scrollbar {
-    width: 8px;
-    height: 1px;
+    width: 6px;
+    height: 6px;
   }
 
   // 滚动条里面小方块
   &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
     background-color: rgba(70, 73, 77, 0.8);
 
     &:hover {
@@ -91,6 +81,7 @@ a {
 
   // 滚动条底层颜色
   &::-webkit-scrollbar-track {
+    border-radius: 3px;
     background-color: #2b2e34;
   }
 }

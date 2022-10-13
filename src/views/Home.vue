@@ -1,18 +1,14 @@
 <template>
-  <div class="home-container">
-    <Logo />
-    <div class="h-full flex">
-      <Left @click="sendRequest" />
-      <Right @click="sendRequest" />
-    </div>
+  <div class="home-container h-full">
+    <el-card class="scroll-bar flex justify-center items-center h-full">
+      <HelloWorld @click="sendRequest" />
+    </el-card>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { inject } from 'vue'
-import Logo from '@/components/Logo.vue'
-import Left from '@/components/Left.vue'
-import Right from '@/components/Right.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
 import { getUserById } from '@/api/user'
 
 const message: any = inject('message')

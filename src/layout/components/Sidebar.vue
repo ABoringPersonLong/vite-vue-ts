@@ -1,8 +1,8 @@
 <template>
   <div class="sidebar-container">
     <el-menu
-      class="el-menu-vertical-demo"
-      background-color="#304156"
+      class="el-menu-vertical-demo border-0"
+      background-color="#21252b"
       text-color="#fff"
       active-text-color="#409eff"
       unique-opened
@@ -49,11 +49,3 @@ watch(route, newVal => { // 监听地址栏发生变化，根据 url 地址设�
   activePath.value = newVal.path
 }, { immediate: true })
 </script>
-
-<style lang="scss" scoped>
-.sidebar-container {
-  .el-menu {
-    border-right: none;
-  }
-}
-</style>

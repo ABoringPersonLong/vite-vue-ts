@@ -8,7 +8,7 @@ module.exports = {
   // daisyUI 配置
   daisyui: {
     styled: true,
-    themes: true,
+    themes: ['dark'],
     base: true,
     utils: true,
     logs: true,

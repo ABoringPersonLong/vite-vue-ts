@@ -1,14 +1,15 @@
 import 'normalize.css'
-import '@/styles/tailwind.css'
 import '@/assets/iconfont/iconfont.css'
-import 'element-plus/theme-chalk/el-loading.css'
-import 'element-plus/theme-chalk/el-message.css'
-import '@/styles/global.scss'
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
+import '@/styles/tailwind.css'
 import '@/styles/base.scss'
+import '@/styles/global.scss'
 import { createApp } from 'vue'
-import { ElMessage } from 'element-plus'
 import router from '@/router'
 import pinia from '@/store'
+import ElementPlus, { ElMessage } from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import App from '@/App.vue'
 
 const app = createApp(App)
@@ -18,4 +19,5 @@ app.provide('message', ElMessage)
 
 app.use(router)
 app.use(pinia)
+app.use(ElementPlus, { locale: zhCn })
 app.mount('#app')

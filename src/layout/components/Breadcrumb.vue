@@ -39,6 +39,3 @@ watch(route, (newVal: any) => { // 监听地址栏发生变化，根据 url 地�
   }
 }, { immediate: true })
 </script>
-
-<style lang="scss" scoped>
-</style>
