@@ -4,7 +4,7 @@ body,
   height: 100%;
 }
 
-.el-card {
-  border: none;
-  background-color: #141414;
+// 为了切换主题的时候有过渡效果
+body {
+  transition: all .3s;
 }

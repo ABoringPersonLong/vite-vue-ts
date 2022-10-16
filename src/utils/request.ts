@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios'
-import { ElLoading } from 'element-plus'
+import { ElLoading, ElMessage } from 'element-plus'
 
 // 创建 axios 实例
 const service: AxiosInstance = axios.create({
@@ -18,6 +18,7 @@ service.interceptors.request.use((config: AxiosRequestConfig) => {
   return config
 }, (error: AxiosError) => {
   loadingInstance.close()
+  ElMessage.error('请求失败！')
   return Promise.reject(error)
 })
 
@@ -27,6 +28,7 @@ service.interceptors.response.use((response: AxiosResponse) => {
   return response
 }, (error: AxiosError) => {
   loadingInstance.close()
+  ElMessage.error('请求失败！')
   return Promise.reject(error)
 })
 

@@ -46,6 +46,8 @@ module.exports = {
     'vue/html-closing-bracket-spacing': 2, // 自闭和元素的 / 前面必须加空格，如 <div />
     'vue/singleline-html-element-content-newline': 0, // 禁用在单行元素的内容之前和之后需要换行
     'vue/mustache-interpolation-spacing': 2, // 插值表达式之间要有 1 个空格的间距，如 {{ name }}
+    'vue/v-slot-style': 0, // 禁用强制使用 #，可以使用 v-slot
+    'vue/attributes-order': 2, // 强制调整属性顺序
     '@typescript-eslint/indent': [2, 2], // ts 定义类型缩进 2 个空格
     '@typescript-eslint/space-before-function-paren': 0, // ts 禁用函数小括号前加空格
     '@typescript-eslint/no-unused-vars': 2, // 定义了类型必须使用

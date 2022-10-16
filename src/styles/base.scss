@@ -59,8 +59,8 @@ img {
   -webkit-box-orient: vertical;
 }
 
-// 滚动条样式的类名
-.scroll-bar {
+// 滚动条样式的类名（黑色主题）
+.dark-scroll-bar {
   overflow: auto;
 
   // 滚动条整体样式
@@ -75,7 +75,7 @@ img {
     background-color: rgba(70, 73, 77, 0.8);
 
     &:hover {
-      background-color: #56585c;
+      background-color: rgba(86, 88, 92, 0.8);
     }
   }
 
@@ -83,5 +83,32 @@ img {
   &::-webkit-scrollbar-track {
     border-radius: 3px;
     background-color: #2b2e34;
+  }
+}
+
+// 滚动条样式的类名（白色主题）
+.light-scroll-bar {
+  overflow: auto;
+
+  // 滚动条整体样式
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  // 滚动条里面小方块
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(217, 217, 217, 0.8);
+
+    &:hover {
+      background-color: rgba(207, 207, 207, 0.8);
+    }
+  }
+
+  // 滚动条底层颜色
+  &::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: #f2f2f2;
   }
 }

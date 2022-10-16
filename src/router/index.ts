@@ -12,13 +12,28 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: 'home',
+        name: 'home',
         component: () => import('@/views/Home.vue')
       },
       {
-        path: 'user',
-        component: () => import('@/views/User.vue')
+        path: 'users',
+        name: 'users',
+        component: () => import('@/views/system-management/Users.vue')
+      },
+      {
+        path: 'datamonitoring',
+        name: 'datamonitoring',
+        component: () => import('@/views/system-monitoring/DataMonitoring.vue')
       }
     ]
+  },
+  {
+    path: '/:pathMatch(.*)',
+    redirect: '/404'
+  },
+  {
+    path: '/404',
+    component: () => import('@/views/404.vue')
   }
 ]
 

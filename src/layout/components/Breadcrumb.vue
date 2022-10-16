@@ -7,16 +7,23 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { ref, watch, Ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { ArrowRight } from '@element-plus/icons-vue'
 
 const route = useRoute()
 
-const breadcrumbList = ref([{ name: '', path: '' }]) // 面包屑导航列表
+// 定义类型
+interface Breadcrumb {
+  name: string
+  path: string
+}
+
+// 响应式状态
+const breadcrumbList: Ref<Breadcrumb[]> = ref([]) // 面包屑导航列表
 
 // 监听器
-watch(route, (newVal: any) => { // 监听地址栏发生变化，根据 url 地址设置对应的面包屑导航
+watch(route, newVal => { // 监听地址栏发生变化，根据 url 地址设置对应的面包屑导航
   const { path } = newVal
   if (path === '/home') {
     breadcrumbList.value = [
@@ -25,15 +32,19 @@ watch(route, (newVal: any) => { // 监听地址栏发生变化，根据 url 地�
         path: ''
       }
     ]
-  } if (path === '/user') {
+  } if (path === '/users') {
     breadcrumbList.value = [
       {
         name: '首页',
         path: '/home'
       },
       {
+        name: '系统管理',
+        path: ''
+      },
+      {
         name: '用户管理',
-        path: '/user'
+        path: ''
       }
     ]
   }

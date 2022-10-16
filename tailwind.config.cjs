@@ -5,10 +5,14 @@ module.exports = {
     extend: {}
   },
   plugins: [require('daisyui')],
+  // 禁用预检
+  corePlugins: {
+    preflight: false
+  },
   // daisyUI 配置
   daisyui: {
     styled: true,
-    themes: ['dark'],
+    themes: ['dark', 'emerald'],
     base: true,
     utils: true,
     logs: true,
