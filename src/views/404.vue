@@ -1,7 +1,7 @@
 <template>
   <div class="404-container relative h-full overflow-hidden">
     <div class="absolute left-1/2 top-1/2 flex items-center -translate-x-1/2 -translate-y-1/2">
-      <div class=" animate__animated animate__fadeInLeft">
+      <div class="animate__animated animate__fadeInLeft">
         <img src="@/assets/images/404.png" alt="404" class="h-80">
       </div>
       <div class="w-[18.75rem] animate__animated animate__fadeInRight">
