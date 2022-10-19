@@ -27,7 +27,7 @@
             <el-switch v-model="row.status" @change="userStateChange(row)" />
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="197">
+        <el-table-column label="操作" width="200">
           <template v-slot="{ row }">
             <el-button type="primary" :icon="Edit" @click="showUpdateDialog(row.id)">编辑</el-button>
             <el-button type="danger" :icon="Delete" @click="deleteUser(row.id)">删除</el-button>
