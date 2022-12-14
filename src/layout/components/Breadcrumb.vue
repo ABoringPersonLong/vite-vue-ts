@@ -32,7 +32,7 @@ watch(route, newVal => { // 监听地址栏发生变化，根据 url 地址设�
         path: ''
       }
     ]
-  } if (path === '/users') {
+  } else if (path === '/users') {
     breadcrumbList.value = [
       {
         name: '首页',

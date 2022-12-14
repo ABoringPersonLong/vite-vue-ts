@@ -1,29 +1,33 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import NProgress from 'nprogress' // 进度条
 import 'nprogress/nprogress.css' // 进度条样式
+import Layout from '@/layout/Layout.vue'
+import Home from '@/views/Home.vue'
+import Users from '@/views/system-management/Users.vue'
+import DataMonitoring from '@/views/system-monitoring/DataMonitoring.vue'
 
 NProgress.configure({ showSpinner: false }) // 显示右上角螺旋加载提示
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('@/layout/Layout.vue'),
+    component: Layout,
     redirect: '/home',
     children: [
       {
         path: 'home',
         name: 'home',
-        component: () => import('@/views/Home.vue')
+        component: Home
       },
       {
         path: 'users',
         name: 'users',
-        component: () => import('@/views/system-management/Users.vue')
+        component: Users
       },
       {
         path: 'datamonitoring',
         name: 'datamonitoring',
-        component: () => import('@/views/system-monitoring/DataMonitoring.vue')
+        component: DataMonitoring
       }
     ]
   },
