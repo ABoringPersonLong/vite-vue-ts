@@ -77,12 +77,12 @@ const handleChange = (val: boolean) => { // 处理切换主题开关改变
 <style lang="scss" scoped>
 .navbar-container {
   // 开关里面的圆点
-  ::v-deep .el-switch__action {
+  :deep(.el-switch__action) {
     display: none;
   }
 
   // 开关里面的图标
-  ::v-deep .el-switch__inner {
+  :deep(.el-switch__inner) {
     border-radius: 50%;
     background-color: v-bind(elSwitchInnerColor);
 
